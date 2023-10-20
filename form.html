@@ -1,33 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu primeiro formulario></title>
 </head>
+
 <body>
     <main>
         <form action="index.html" method="POST">
+            <fieldset>
+                <label for="nome">Nome: </label>
+                <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+            </fieldset>
+            <fieldset>
+                <label for="number">Idade: </label>
+                <input type="number" id="number" name="number" required placeholder="Digite sua idade"> 
+            </fieldset>
 
-            <label for="nome">Nome: </label>
-            <input type="text" id="nome" name="nome">
+            <fieldset>
+                <label for="email">E-mail: </label>
+                <input type="email" id="email" name="email" required placeholder="Digite seu email">
+            </fieldset>
+            <fieldset>
+                <label for="text">CPF: </label>
+                <input type="text" id="cpf" name="cpf" required placeholder="Digite seu nome" >
+            </fieldset>
+
+
+            <fieldset>
+                <label for="estado">Estado:</label>
+                <select id="estado" name="estado" required>
+                    <option value="" selected>Selecione...</option>
+                    <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+                    <option value="Rio de Janeiro"> Rio de Janeiro</option>
+                    <option value="São Paulo">São Paulo</option>
+
+                </select> 
+            </fieldset>
+            <button type="submit">enviar</button>
             
-            <label for="email">E-mail: </label>
-            <input type="email" id="email" name="email">
-
-            <label for="text">CPF: </label>
-            <input type="text" id="cpf" name="cpf">
-
-         <button type="submit" onclick="enviar()">enviar</button>
         </form>
-
+        
         <script>
-            function enviar(){
-                alert ('enviou!');
-                event. preventDefault();
+            function enviar() {
+                alert('enviou!');
+                event.preventDefault();
             }
         </script>
     </main>
-    
+
 </body>
+
 </html>
